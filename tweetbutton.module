@@ -80,7 +80,7 @@ function tweetbutton_permission() {
  * Implementation of hook_node_view()
  */
 function tweetbutton_node_view($node, $view_mode) {
-  if ((in_array($node->type, variable_get('tweetbutton_node_types', array('article'))) 
+  if ((in_array($node->type, variable_get('tweetbutton_node_types', array('article')), true) 
     && in_array($view_mode, variable_get('tweetbutton_node_location', array('full')))
     && user_access('access tweetbutton')) || $view_mode != 'foo') {
     
